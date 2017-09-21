@@ -175,26 +175,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Minimum Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-9n-mhi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum Stars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-9n-mhi">
                                 <rect key="frame" x="16" y="90" width="114" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="p9c-ts-Bhv"/>
+                                    <constraint firstAttribute="width" constant="114" id="v9L-yp-KlS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ML-6v-Rnc">
-                                <rect key="frame" x="317" y="89" width="11" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XtW-ph-Kjo">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="300000" translatesAutoresizingMaskIntoConstraints="NO" id="XtW-ph-Kjo">
                                 <rect key="frame" x="158" y="85" width="118" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3v6-G1-eln"/>
+                                    <constraint firstAttribute="width" constant="114" id="yVP-mM-GtG"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="starSliderValueChanged:" destination="0TZ-Ac-4Sb" eventType="valueChanged" id="Nqt-yk-wzB"/>
+                                </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ML-6v-Rnc">
+                                <rect key="frame" x="297" y="89" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ML-6v-Rnc" firstAttribute="leading" secondItem="XtW-ph-Kjo" secondAttribute="trailing" constant="23" id="5YM-aE-W83"/>
+                            <constraint firstItem="1ML-6v-Rnc" firstAttribute="top" secondItem="K7i-lg-Xfg" secondAttribute="bottom" constant="25" id="Aq3-vK-40s"/>
+                            <constraint firstAttribute="trailing" secondItem="1ML-6v-Rnc" secondAttribute="trailing" constant="16" id="B8g-St-Lhz"/>
+                            <constraint firstItem="XtW-ph-Kjo" firstAttribute="leading" secondItem="eaX-9n-mhi" secondAttribute="trailing" constant="30" id="Rsb-hL-szd"/>
+                            <constraint firstItem="eaX-9n-mhi" firstAttribute="leading" secondItem="77L-Sn-vN5" secondAttribute="leading" constant="16" id="dYa-yS-VZp"/>
+                            <constraint firstItem="XtW-ph-Kjo" firstAttribute="top" secondItem="K7i-lg-Xfg" secondAttribute="bottom" constant="21" id="eR0-tz-MdG"/>
+                            <constraint firstItem="eaX-9n-mhi" firstAttribute="top" secondItem="K7i-lg-Xfg" secondAttribute="bottom" constant="26" id="seK-Fz-uWP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="cDJ-4G-A0G">
                         <barButtonItem key="leftBarButtonItem" title="Save" id="p6g-Wz-l2J">
