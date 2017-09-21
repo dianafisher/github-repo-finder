@@ -87,7 +87,9 @@ class RepoResultsViewController: UIViewController, UITableViewDataSource, UITabl
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        let settingsVC = segue.destination as! SettingsViewController
+        // The destination view controller is actually a UINavigationController, so get the top view controller out of it.
+        let navVC = segue.destination as! UINavigationController
+        let settingsVC = navVC.topViewController as! SettingsViewController
         settingsVC.searchSettings = searchSettings
     }
     
